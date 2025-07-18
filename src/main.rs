@@ -5,6 +5,7 @@ use solana_transaction_status::{EncodedConfirmedBlock, UiTransactionEncoding};
 
 fn calculate_for_range(client: &RpcClient, threshold_seconds: i64) {
     let calculation_start = Utc::now();
+    // let calculation_start = Utc::now();
 
     let newest_block_number = client.get_slot().unwrap();
     let mut current_block = get_block(client, newest_block_number);
